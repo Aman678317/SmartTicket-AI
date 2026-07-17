@@ -25,18 +25,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount static files for the frontend UI
-current_dir = os.path.dirname(__file__)
-static_dir = os.path.join(current_dir, "static")
-app.mount("/static", StaticFiles(directory=static_dir), name="static")
+
 
 class TicketRequest(BaseModel):
     ticket_text: str
 
-@app.get("/", response_class=HTMLResponse)
-async def serve_ui():
-    with open(os.path.join(static_dir, "index.html"), "r", encoding="utf-8") as f:
-        return f.read()
+@app.get("/")
+async def root():
+    return {"status": "SmartTicket AI API is running"}
 
 @app.post("/api/process_ticket")
 async def process_ticket(request: TicketRequest):

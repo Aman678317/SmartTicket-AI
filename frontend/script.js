@@ -11,8 +11,12 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
     pipeline.style.display = 'flex';
     steps.forEach(step => step.classList.remove('visible'));
     
+    // Set this to your Render backend URL once deployed (e.g., 'https://smartticket-api.onrender.com')
+    // For local testing, keep it as 'http://localhost:8000'
+    const API_BASE_URL = 'http://localhost:8000';
+
     try {
-        const response = await fetch('/api/process_ticket', {
+        const response = await fetch(`${API_BASE_URL}/api/process_ticket`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
