@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTicket AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SmartTicket AI</h1>
+            <p>Intelligent Ticket Classification & Response</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <textarea id="ticketInput" placeholder="Type your support request here... (e.g. 'I forgot my password' or 'How can I see my leave balance?')"></textarea>
+                <button id="submitBtn">Process Ticket</button>
+            </section>
+
+            <section class="pipeline-section" id="pipeline" style="display: none;">
+                <div class="step" id="step-preprocess">
+                    <div class="step-icon">1</div>
+                    <div class="step-content">
+                        <h3>Preprocessing</h3>
+                        <p id="out-cleaned">...</p>
+                    </div>
+                </div>
+
+                <div class="step" id="step-intent">
+                    <div class="step-icon">2</div>
+                    <div class="step-content">
+                        <h3>Intent Classification</h3>
+                        <p><strong>Intent:</strong> <span id="out-intent">...</span></p>
+                        <p><strong>Group:</strong> <span id="out-group">...</span></p>
+                        <p><strong>Confidence:</strong> <span id="out-confidence">...</span>%</p>
+                    </div>
+                </div>
+
+                <div class="step" id="step-rag">
+                    <div class="step-icon">3</div>
+                    <div class="step-content">
+                        <h3>Knowledge Retrieval (RAG)</h3>
+                        <p><strong>Retrieved Document:</strong> <span id="out-doc">...</span></p>
+                    </div>
+                </div>
+
+                <div class="step" id="step-llm">
+                    <div class="step-icon">4</div>
+                    <div class="step-content">
+                        <h3>Final Response (LLM)</h3>
+                        <div class="response-box" id="out-response">...</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

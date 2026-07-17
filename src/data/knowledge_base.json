@@ -1,0 +1,26 @@
+[
+    {
+        "id": "doc1",
+        "title": "Reset Password Guide",
+        "intent": "Password Reset",
+        "content": "Reset Password Guide\n\n1. Click 'Forgot Password' on the login screen.\n2. Enter your registered email address.\n3. Verify the OTP sent to your email.\n4. Create a new password.\nIf your account is locked due to multiple failed attempts, please contact the IT Help Desk directly."
+    },
+    {
+        "id": "doc2",
+        "title": "Leave Balance Guide",
+        "intent": "Leave Management",
+        "content": "Leave Balance Guide\n\nTo view your leave balance, follow these steps:\n1. Go to the Dashboard.\n2. Navigate to the HR Portal.\n3. Click on 'Leave Management'.\n4. Select 'My Leave Balance'.\nThis page displays your available, used, and remaining leave."
+    },
+    {
+        "id": "doc3",
+        "title": "Payroll and Payslips",
+        "intent": "Payroll",
+        "content": "Payroll Guide\n\nPayslips are generated on the 25th of every month. You can view or download them by going to the HR Portal -> Payroll -> My Payslips. If you notice any discrepancies in your salary, please raise a ticket with the Finance department."
+    },
+    {
+        "id": "doc4",
+        "title": "IT Support and Equipment",
+        "intent": "IT Support",
+        "content": "IT Support Policy\n\nFor broken hardware (like laptop screens) or persistent network issues, please bring your device to the IT Service Desk on the 2nd floor, or call extension 4004. A temporary replacement laptop can be issued while yours is under repair."
+    }
+]
