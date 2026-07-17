@@ -6,11 +6,11 @@ import os
 import uvicorn
 
 # Import pipeline steps
-from pipeline.preprocessing import preprocess_text
-from pipeline.embeddings import get_embedding
-from pipeline.classifier import classify_intent
-from pipeline.rag import retrieve_knowledge
-from pipeline.llm_generator import generate_response
+from src.pipeline.preprocessing import preprocess_text
+from src.pipeline.embeddings import get_embedding
+from src.pipeline.classifier import classify_intent
+from src.pipeline.rag import retrieve_knowledge
+from src.pipeline.llm_generator import generate_response
 
 from fastapi.middleware.cors import CORSMiddleware
 
